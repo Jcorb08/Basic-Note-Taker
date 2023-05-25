@@ -1,7 +1,13 @@
 # Basic-Note-Taker
 RESTful API for a basic note-taking application using Django
 
+## Features
+- All requirements below
+- Uses SQLite to store the data
+- runs tests on push using github CI
+
 ## Requirements
+Broken down by me to better understand task
 
 - The API should allow:
   -  create a note, 

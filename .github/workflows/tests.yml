@@ -1,0 +1,26 @@
+name: Django Tests CI
+
+on:
+  push:
+   branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      - run: pip install --upgrade pip
+      - run: pip install -r /home/runner/work/Basic-Note-Taker/Basic-Note-Taker/requirements.txt
+      - name: Run Room Tests
+        run: |
+          cd /home/runner/work/Basic-Note-Taker/Basic-Note-Taker/
+          python manage.py test
+

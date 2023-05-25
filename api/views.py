@@ -2,6 +2,7 @@ from api.models import Note
 from api.serializers import NoteSerializer
 from rest_framework import generics
 
+# https://www.django-rest-framework.org/api-guide/generic-views/#concrete-view-classes
 # API methods without a id in the URL
 class NotesList(generics.ListCreateAPIView):
     """
@@ -28,6 +29,7 @@ class NotesDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 # An example of how to do it without generics
+# https://www.django-rest-framework.org/tutorial/3-class-based-views/
 # class Note_API(APIView):
 #     """
 #     Notes API
