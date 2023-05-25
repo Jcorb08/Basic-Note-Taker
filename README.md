@@ -1,6 +1,17 @@
 # Basic-Note-Taker
 RESTful API for a basic note-taking application using Django
+
 [![Django Tests CI](https://github.com/Jcorb08/Basic-Note-Taker/actions/workflows/tests.yml/badge.svg)](https://github.com/Jcorb08/Basic-Note-Taker/actions/workflows/tests.yml)
+
+## To run
+- Download the git repo
+- install a local python3.10 enviroment
+- activate your enviroment
+- install the packages using requirements.txt
+- run tests using `python manage.py test`
+- run API/webserver using `python manage.py runserver`
+- access get_all and create on `/`
+- access get_single, update and delete on `/<int:pk>`
 
 ## Features
 - All requirements below
